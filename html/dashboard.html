@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard To-do-app</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <h1>DashBoard</h1>
+      <div class="menu">
+        <h3 id="email"></h3>
+        <button id="logOut">LogOut</button>
+      </div>
+    </nav>
+    <div class="container">
+      <main class="main">
+        <h1>Notes</h1>
+        <input type="text" id="title" placeholder="Enter Title" />
+        <textarea
+          name=""
+          id="description"
+          rows="12"
+          cols="12"
+          placeholder="Write your task"
+        >
+        </textarea>
+        <button id="add-btn">Add</button>
+      </main>
+      <div class="taskList"></div>
+    </div>
+    <script src="../javascript/dashboard.js"></script>
+  </body>
+</html>

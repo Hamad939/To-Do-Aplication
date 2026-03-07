@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 100%;
+  padding: 16px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(7, 177, 255);
+  color: white;
+}
+.nav button {
+  border: none;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: white;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+#logOut:active {
+  opacity: 0.5;
+  scale: 0.9;
+  transition: 0.5s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main {
+  min-width: 460px;
+  width: 45%;
+  margin: 12px;
+  padding: 12px 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.main input,
+textarea,
+button {
+  width: 60%;
+  padding: 12px 12px;
+  border: 1px solid gray;
+  font-size: large;
+}
+.main button {
+  background: rgb(7, 177, 255);
+  border: none;
+  color: white;
+}
+.main button:active {
+  opacity: 0.6;
+  color: black;
+  transition: 0.5s ease;
+}
+
+.taskList {
+  min-width: 460px;
+  width: 45%;
+  margin: 12px;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  border: 2px solid;
+  padding: 8px;
+  width: 40%;
+  height: 350px;
+  word-wrap: break-word;
+}
+.card h1 {
+  text-align: center;
+  z-index: 40000;
+  margin-top: 28px;
+}
+.card p {
+  word-spacing: 1px;
+  font-weight: 500;
+  font-size: large;
+}
+.del-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 30px;
+  padding: 8px;
+  background: red;
+  color: white;
+}
+.del-btn:active {
+  scale: 0.9;
+  opacity: 0.6;
+}
