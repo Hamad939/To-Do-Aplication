@@ -8,7 +8,7 @@ const logOut = document.getElementById("logOut");
 let tasksList = JSON.parse(localStorage.getItem("tasks")) || [];
 let main = document.querySelector(".main");
 if (!currentUser) {
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 }
 email.innerText = currentUser.email;
 alert(`Welcome ${currentUser.name}`);

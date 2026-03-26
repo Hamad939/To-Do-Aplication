@@ -6,7 +6,7 @@ btn.addEventListener("click", () => {
   login(email, password);
 });
 if (currentUser) {
-  window.location.href = "dashboard.html";
+  window.location.href = "html/dashboard.html";
 }
 function login(email, password) {
   let users = JSON.parse(localStorage.getItem("users")) || [];

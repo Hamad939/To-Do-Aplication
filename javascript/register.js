@@ -33,7 +33,7 @@ function addUser(name, email, password) {
     name.value = "";
     email.value = "";
     password.value = "";
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
   } else {
     console.log("Fill all fields");
   }
