@@ -7,12 +7,12 @@ const email = document.getElementById("email");
 const logOut = document.getElementById("logOut");
 let tasksList = JSON.parse(localStorage.getItem("tasks")) || [];
 let main = document.querySelector(".main");
-
-email.innerText = currentUser.email;
-alert(`Welcome ${currentUser.name}`);
 if (!currentUser) {
   window.location.href = "index.html";
 }
+email.innerText = currentUser.email;
+alert(`Welcome ${currentUser.name}`);
+
 btn.addEventListener("click", () => {
   if (title.value.trim() !== "" && description.value.trim() !== "") {
     const task = {
@@ -45,7 +45,6 @@ function adjustLayout() {
     tasks.style.display = "none";
   } else {
     main.style.flex = "1";
-    tasks.style.display = "block";
   }
 }
 function taskRender() {
