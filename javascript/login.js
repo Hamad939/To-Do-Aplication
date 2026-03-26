@@ -16,7 +16,7 @@ function login(email, password) {
 
   if (user) {
     localStorage.setItem("currentUser", JSON.stringify(user));
-    window.location.href = "dashboard.html";
+    window.location.href = "html/dashboard.html";
   } else {
     alert("incorrect email or password");
   }
