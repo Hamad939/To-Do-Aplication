@@ -34,7 +34,7 @@ btn.addEventListener("click", () => {
 
 logOut.addEventListener("click", () => {
   localStorage.removeItem("currentUser");
-  window.location.href = "index.html";
+  window.location.href = "../index.html";
 });
 function adjustLayout() {
   if (tasksList.length === 0) {
