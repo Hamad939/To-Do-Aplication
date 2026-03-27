@@ -84,14 +84,14 @@ textarea,
   gap: 8px;
 }
 .card {
+  width: 40%;
+  height: 350px;
   display: flex;
   flex-direction: column;
   gap: 8px;
   position: relative;
   border: 2px solid;
   padding: 8px;
-  width: 40%;
-  height: 350px;
   word-wrap: break-word;
 }
 .card h1 {
@@ -121,6 +121,10 @@ textarea,
   opacity: 0.6;
 }
 @media screen and (min-width: 300px) and (max-width: 600px) {
+  body {
+    font-size: small;
+  }
+
   .nav {
     width: 100%;
     padding: 16px 12px;
@@ -129,6 +133,7 @@ textarea,
     align-items: center;
     background: rgb(7, 177, 255);
     color: white;
+    font-size: small;
   }
   #email {
     display: none;
@@ -143,17 +148,19 @@ textarea,
   .main {
     width: 90%;
   }
-  .taskList {
-    width: 90%;
-  }
-
   .main input,
   textarea,
   #add-btn {
-    width: 60% !important;
-    padding: 12px 12px;
-    border: 1px solid gray;
-    font-size: large;
+    width: 80%;
+  }
+  .taskList {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 80%;
   }
 }
 @media screen and (min-width: 700px) {
