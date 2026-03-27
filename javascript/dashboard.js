@@ -51,7 +51,6 @@ function adjustLayout() {
     title.style.width = "";
     description.style.width = "";
     btn.style.width = "";
-    tasks.style.display = "block";
   }
 }
 function taskRender() {
