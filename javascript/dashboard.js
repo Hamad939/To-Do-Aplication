@@ -37,14 +37,21 @@ logOut.addEventListener("click", () => {
   window.location.href = "../index.html";
 });
 function adjustLayout() {
-  if (tasksList.length === 0) {
-    main.style.flex = "1 1 50%";
-    title.style.width = "40%";
-    description.style.width = "40%";
-    btn.style.width = "40%";
-    tasks.style.display = "none";
+  if (window.innerWidth >= 900) {
+    if (tasksList.length === 0) {
+      main.style.flex = "1 1 50%";
+      title.style.width = "40%";
+      description.style.width = "40%";
+      btn.style.width = "40%";
+      tasks.style.display = "none";
+    } else {
+      main.style.flex = "1";
+    }
   } else {
-    main.style.flex = "1";
+    title.style.width = "";
+    description.style.width = "";
+    btn.style.width = "";
+    tasks.style.display = "block";
   }
 }
 function taskRender() {
