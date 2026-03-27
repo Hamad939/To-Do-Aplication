@@ -3,9 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 
 .nav {
-  width: 100vw;
+  width: 100%;
   padding: 16px 12px;
   display: flex;
   justify-content: space-between;
@@ -35,12 +38,12 @@
 
 .container {
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .main {
-  min-width: 460px;
   width: 45%;
   margin: 12px;
   padding: 12px 16px;
@@ -72,12 +75,11 @@ textarea,
 }
 
 .taskList {
-  min-width: 460px;
   width: 45%;
   margin: 12px;
   padding: 12px 16px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px;
 }
@@ -131,6 +133,20 @@ textarea,
   #email {
     display: none;
   }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .main {
+    width: 90%;
+  }
+  .taskList {
+    width: 90%;
+  }
+
   .main input,
   textarea,
   #add-btn {
@@ -138,5 +154,10 @@ textarea,
     padding: 12px 12px;
     border: 1px solid gray;
     font-size: large;
+  }
+}
+@media screen and (min-width: 700px) {
+  .main {
+    min-width: 460px;
   }
 }
