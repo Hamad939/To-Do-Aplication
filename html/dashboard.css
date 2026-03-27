@@ -5,7 +5,7 @@
 }
 
 .nav {
-  width: 100%;
+  width: 100vw;
   padding: 16px 12px;
   display: flex;
   justify-content: space-between;
