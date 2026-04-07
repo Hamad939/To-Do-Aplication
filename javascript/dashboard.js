@@ -36,9 +36,9 @@ logOut.addEventListener("click", () => {
   localStorage.removeItem("currentUser");
   window.location.href = "../index.html";
 });
-function adjustLayout() {
+function adjustLayout(currentUserTasks) {
   if (window.innerWidth >= 900) {
-    if (tasksList.length === 0) {
+    if (currentUserTasks.length === 0) {
       main.style.flex = "1 1 50%";
       title.style.width = "40%";
       description.style.width = "40%";
@@ -46,11 +46,14 @@ function adjustLayout() {
       tasks.style.display = "none";
     } else {
       main.style.flex = "1";
+      tasks.style.display = "flex";
     }
   } else {
+    main.style.flex = "";
     title.style.width = "";
     description.style.width = "";
     btn.style.width = "";
+    tasks.style.display = "flex";
   }
 }
 function taskRender() {
@@ -59,8 +62,7 @@ function taskRender() {
   const currentUserTasks = tasksList.filter((task) => {
     return task.id === currentUser.id;
   });
-
-  currentUserTasks.forEach((task, idx) => {
+  currentUserTasks.forEach((task) => {
     let div = document.createElement("div");
     div.className = "card";
     let h1 = document.createElement("h1");
@@ -71,7 +73,8 @@ function taskRender() {
     deleteBtn.innerText = "X";
     deleteBtn.className = "del-btn";
     deleteBtn.addEventListener("click", () => {
-      tasksList.splice(idx, 1);
+      const realIndex = tasksList.indexOf(task);
+      tasksList.splice(realIndex, 1);
       localStorage.setItem("tasks", JSON.stringify(tasksList));
       taskRender();
     });
@@ -82,7 +85,7 @@ function taskRender() {
     tasks.appendChild(div);
   });
 
-  adjustLayout();
+  adjustLayout(currentUserTasks);
 }
 
 taskRender();
